@@ -1,0 +1,10 @@
+# Deployed as hmeworx-meta-images on scintillating-upliftment.
+# Serverless (sleep after idle) matches kcwt-meta-images and keeps incremental cost low.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
